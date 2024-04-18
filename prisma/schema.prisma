@@ -14,15 +14,18 @@ datasource db {
 }
 
 model Url {
-  id          String   @id @default(uuid())
+  id          String        @id @default(uuid())
   originalUrl String
   shortUrl    String
-  urlCode     String   @unique
-  createAt    DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  urlCode     String        @unique
+  createAt    DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  UrlAnalytic UrlAnalytic[]
 }
 
 model UrlAnalytic {
-  id          String   @id @default(uuid())
-  url Url @relation(fields: [url_id],references: [id])
+  id      String @id @default(uuid())
+  url     Url    @relation(fields: [url_id], references: [id])
+  url_id  String
+  clicked Int
 }

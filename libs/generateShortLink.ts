@@ -5,6 +5,6 @@ export default (host:string) => {
     const shortCode = nanoid();
     return{
         shortCode,
-        shortUrl: "http://${host}/api/${shortCode}"
-    }
-}
+        shortUrl: "http://${host}/api/${shortCode}",
+    };
+};

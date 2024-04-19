@@ -1,4 +1,4 @@
-This is a simple url shortner web app developed using 'Next.js' and 'prisma' with mysql for the choice of database
+This is a simple url shortner web app developed using `Next.js` and `prisma` with `mysql` for the choice of database
 
 ## Getting Started
 

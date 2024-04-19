@@ -1,4 +1,6 @@
-This is a simple url shortner web app developed using Next.js and prisma with mysql for the choice of database
+This is a simple url shortner web app developed using `Next.js` and `prisma` with `mysql` for the choice of database.
+
+This app takes an `originalUrl` and returns a `shortUrl` to the user and also provides analytics of the number of times the new link was clicked.
 
 ## Getting Started
 

@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { isWebUri } from "valid-url";
 import { prisma ,generateShortLink} from "@/libs/index";
-import { error } from "console";
+
 
 type RequestData = {
-    url:string;
+    url: string;
 }
 
 export default async function handler(req: NextApiRequest,res: NextApiResponse){

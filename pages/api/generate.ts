@@ -19,6 +19,7 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse){
     const { url }: RequestData = req.body;
     const host = req.headers.host;
     const { shortCode,shortUrl } = generateShortLink(host!);
+    
 
     // checking if original url is valid
     if(!isWebUri(url)){
@@ -49,6 +50,7 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse){
                 urlCode: shortCode
             }
         });
+
         
         // create new analytic
         await tx.urlAnalytic.create({
@@ -72,8 +74,11 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse){
             originalUrl: result.originalUrl,
             shortUrl: result.shortUrl,
             code: result.urlCode,
-        }
-    })
+        },
+    });
+
+    
 
 } 
+
 

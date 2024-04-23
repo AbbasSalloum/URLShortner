@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { customAlphabet } from "nanoid";
 
 export default (host: string) => {
